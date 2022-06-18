@@ -1,52 +1,20 @@
-# Prerequisites
-*.d
+#include <stdio.h>
+int main() {
+    char c;
+    int lowercase_vowel, uppercase_vowel;
+    printf("Enter an alphabet: ");
+    scanf("%c", &c);
 
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
+    // evaluates to 1 if variable c is a lowercase vowel
+    lowercase_vowel = (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u');
 
-# Linker output
-*.ilk
-*.map
-*.exp
+    // evaluates to 1 if variable c is a uppercase vowel
+    uppercase_vowel = (c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U');
 
-# Precompiled Headers
-*.gch
-*.pch
-
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
-
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
-
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
-
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
-
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+    // evaluates to 1 (true) if c is a vowel
+    if (lowercase_vowel || uppercase_vowel)
+        printf("%c is a vowel.", c);
+    else
+        printf("%c is a consonant.", c);
+    return 0;
+}
